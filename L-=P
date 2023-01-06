@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	/*Швачка має тканину довжиною L.Вона мусить пошити
+	подушки довжиною P.Умовно домовимося, що ширина
+	тканини збігається з шириною подушки.Визначити,
+	скільки подушок зможе пошити швачка, якщо множити і ділити вона не вміє.*/
+	int L,P, SUM=0;
+	cout << "Enter the length of the Fabric: " << endl;
+	cin >> L;
+	cout << "Enter the length of the Pillow: " << endl;
+	cin >> P;
+	while (L>=P)
+	{
+		SUM++;
+		L -= P;
+	}
+	cout << SUM;
+}
